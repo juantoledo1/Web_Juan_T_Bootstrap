@@ -2,6 +2,8 @@
 import Navbar from '../components/Navbar.astro';
 import Banner from '../components/Banner.astro';
 import Home from './Home.astro';
+import Servicios from './Servicios.astro';
+import Contacto from './Contacto.astro';
 ---
 
 <html lang="en">
@@ -12,10 +14,12 @@ import Home from './Home.astro';
 		<meta name="generator" content={Astro.generator} />
 		<title>Juan Toledo Peluquero</title>
 	</head>
-	<body>
+	<>
 		<Navbar/>
 		<Banner/>
 		<Home />
+		<Servicios/>
+		<Contacto/>
 		<h1>Astro</h1>
 
 	</body>
