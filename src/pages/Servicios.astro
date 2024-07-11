@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 ---
 
-<section class="conteiner-fluid " id="servicios" style="background: linear-gradient(45deg, #015701, #1e651e); min-height: 100vh;">
+<section class="conteiner-fluid p-3" id="servicios" style="background: linear-gradient(45deg, #015701, #1e651e); min-height: 100vh;">
     <div class="text-center text-light ">
         <h2>Servicios</h2>
         <p>Estos son los servicios y precios con los que contamos en nuestro local</p>
@@ -85,3 +85,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
       </div> 
 </section>
 
+<style>
+  .card:hover {
+  transform: scale(1.04); /* Expande la tarjeta en un 2% */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra */
+  transition: transform 0.5s ease-in-out; /* Opcional: agrega una transición suave */
+}
+
+</style>
