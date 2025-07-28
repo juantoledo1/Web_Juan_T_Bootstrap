@@ -50,7 +50,11 @@ All commands are run from the root of the project, from a terminal:
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
 ================================================
+# tu-proyecto-web-con-bootstrap
+
 Directory structure:
+
+```text
 └── juantoledo1-web_juan_t_bootstrap/
     ├── README.md
     ├── astro.config.mjs
@@ -68,11 +72,6 @@ Directory structure:
             ├── Home.astro
             ├── index.astro
             └── Servicios.astro
-
-
-================================================
-FILE: astro.config.mjs
-================================================
 import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
