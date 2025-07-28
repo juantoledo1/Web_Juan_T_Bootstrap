@@ -49,6 +49,25 @@ All commands are run from the root of the project, from a terminal:
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
+================================================
+Directory structure:
+└── juantoledo1-web_juan_t_bootstrap/
+    ├── README.md
+    ├── astro.config.mjs
+    ├── package.json
+    ├── tsconfig.json
+    └── src/
+        ├── env.d.ts
+        ├── components/
+        │   ├── Banner.astro
+        │   ├── Footer.astro
+        │   ├── Navbar.astro
+        │   └── Navbar.css
+        └── pages/
+            ├── Contacto.astro
+            ├── Home.astro
+            ├── index.astro
+            └── Servicios.astro
 
 
 ================================================
