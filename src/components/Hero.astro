@@ -3,20 +3,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/retro.css';
 ---
 
-<section id="hero" class="hero-section d-flex align-items-center justify-content-center text-center" style="background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460); min-height: 100vh; position: relative; overflow: hidden;">
-  <!-- Fondo con estética retro -->
-  <div class="retro-grid"></div>
+<section id="hero" class="hero-section d-flex align-items-center justify-content-center text-center" style="min-height: 100vh; position: relative; overflow: hidden;">
+  <!-- Video de fondo -->
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="/bannerbetel.mp4" type="video/mp4">
+    Tu navegador no soporta videos HTML5.
+  </video>
+  <div class="video-overlay"></div>
   
   <div class="container position-relative">
     <div class="row justify-content-center">
-      <div class="col-lg-10 text-center">
+      <div class="col-lg-10 text-center hero-content">
         <h1 class="hero-title display-3 fw-bold text-white mb-4" data-aos="fade-up">
           Renová tu estilo con diversión
         </h1>
         <p class="hero-subtitle lead text-light mb-5" data-aos="fade-up" data-aos-delay="200">
           Cortes con onda , videojuegos retros, películas , música y buena vibra en Posadas.
         </p>
-        <p class="microcopy text-muted mb-4" data-aos="fade-up" data-aos-delay="300">
+        <p class="microcopy hero-microcopy mb-4" data-aos="fade-up" data-aos-delay="300">
           Tu estilo se juega acá.
         </p>
         <div class="hero-buttons d-flex flex-wrap justify-content-center gap-3" data-aos="fade-up" data-aos-delay="400">
@@ -46,18 +50,34 @@ import '../styles/retro.css';
   overflow: hidden;
 }
 
-.retro-grid {
+.hero-video {
   position: absolute;
-  top: 0; 
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
-    linear-gradient(rgba(26, 26, 46, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(26, 26, 46, 0.1) 1px, transparent 1px);
-  background-size: 20px 20px;
-  z-index: -1; /* Cambiado de 1 a -1 para que esté detrás de todo */
-  pointer-events: none; /* Esto permite hacer clic a través del grid */
+  object-fit: cover;
+  z-index: -2; /* Detrás de todo */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 20, 0.6); /* Overlay oscuro semi-transparente para que el texto se vea mejor */
+  z-index: -1; /* Justo encima del video pero detrás del contenido */
+}
+
+.hero-content {
+  padding-top: 2rem; /* Levanta ligeramente el contenido para que se aprecie más el video */
+}
+
+.hero-buttons {
+  margin-top: 2rem; /* Baja ligeramente los botones para que se aprecie más el video */
 }
 
 .retro-corners {
@@ -115,10 +135,18 @@ import '../styles/retro.css';
   margin: 0 auto 1.5rem;
 }
 
-.microcopy {
+.hero-microcopy {
   font-style: italic;
   font-size: 1.2rem;
   text-align: center;
+  color: #fff !important; /* Fuerza el color blanco */
+  text-shadow: 
+    0 0 5px #fff, 
+    0 0 10px #fff, 
+    0 0 15px #39FF14, 
+    0 0 20px #39FF14; /* Efecto neon para mejor visibilidad */
+  z-index: 2;
+  position: relative;
 }
 
 .hero-buttons .btn {
@@ -160,6 +188,16 @@ import '../styles/retro.css';
 }
 
 /* Estilos responsivos */
+@media (max-width: 992px) {
+  .hero-content {
+    padding-top: 1rem;
+  }
+  
+  .hero-buttons {
+    margin-top: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;
@@ -167,6 +205,14 @@ import '../styles/retro.css';
   
   .hero-subtitle {
     font-size: 1.2rem;
+  }
+  
+  .hero-content {
+    padding-top: 0.5rem;
+  }
+  
+  .hero-buttons {
+    margin-top: 1rem;
   }
   
   .hero-buttons .btn {
@@ -179,6 +225,14 @@ import '../styles/retro.css';
 @media (max-width: 576px) {
   .hero-title {
     font-size: 2rem;
+  }
+  
+  .hero-content {
+    padding-top: 0;
+  }
+  
+  .hero-buttons {
+    margin-top: 0.5rem;
   }
   
   .hero-buttons .btn {
