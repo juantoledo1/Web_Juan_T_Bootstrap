@@ -1,0 +1,87 @@
+---
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/retro.css';
+---
+
+<section id="about" class="about-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title retro-title mb-4" data-aos="fade-up">Sobre Betelgeuse</h2>
+        <div class="about-content" data-aos="fade-up" data-aos-delay="100">
+          <p class="lead text-center">
+            Betelgeuse es una experiencia diferente: cortes modernos, videojuegos arcades y de consolas retros, películas clásicas de los 90s/2000 (terror, comedia, acción y adaptaciones de videojuegos), música alternativa, libros estilo Stephen King y opcional práctica conversacional de inglés.
+          </p>
+          <p class="mt-4 text-center">
+            Acá la espera también se disfruta: jugás, ves una peli, leés o charlamos en inglés. Buena onda, actitud y estilo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.about-section {
+  background: linear-gradient(to bottom, #0f3460, #1a1a2e);
+  color: #fff;
+  padding: 5rem 0;
+}
+
+.section-title {
+  color: #e83515;
+  position: relative;
+  display: inline-block;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #e83515;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.lead {
+  font-weight: 300;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .about-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .about-content p {
+    font-size: 1rem;
+  }
+}
+</style>

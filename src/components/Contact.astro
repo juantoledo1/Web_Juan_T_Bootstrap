@@ -1,0 +1,181 @@
+---
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/retro.css';
+---
+
+<section id="contacto" class="contact-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h2 class="section-title retro-title" data-aos="fade-up">Contacto y Turnos</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+          Comunicate con nosotros y coordinamos tu visita
+        </p>
+      </div>
+    </div>
+    
+    <div class="row g-5 justify-content-center">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="contact-info retro-border text-center">
+          <h3 class="text-white mb-4">Ubicación</h3>
+          <p class="text-light"><i class="bi bi-geo-alt-fill me-2"></i> Betelgeuse - Lopez Torres 4155, Posadas, Misiones, Argentina</p>
+          
+          <h4 class="text-white mt-4 mb-4">Horarios</h4>
+          <p class="text-light">Lunes a Sábado: 15:30 a 20:00</p>
+          <p class="text-light">Domingo: Cerrado</p>
+          
+          <div class="contact-buttons mt-4 d-flex flex-wrap justify-content-center">
+            <a href="https://wa.me/5493764674458" class="btn btn-success btn-lg me-3 mb-3 btn-retro" target="_blank">
+              <i class="bi bi-whatsapp"></i> Reservar turno
+            </a>
+            <a href="https://www.instagram.com/betelgeuse_hub/" class="btn btn-primary btn-lg me-3 mb-3 btn-retro" target="_blank">
+              <i class="bi bi-instagram"></i> Instagram
+            </a>
+            <a href="https://maps.app.goo.gl/ZzP7wVWi3McqFYM79" class="btn btn-outline-light btn-lg mb-3 btn-retro" target="_blank">
+              <i class="bi bi-map"></i> Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="map-container retro-border">
+          <iframe 
+            src="https://maps.google.com/maps?q=Betelgeuse+Lopez+Torres+4155+Posadas+Misiones+Argentina&output=embed&z=17" 
+            width="100%" 
+            height="350" 
+            style="border:0; border-radius: 10px;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.contact-section {
+  background: linear-gradient(to bottom, #0f3460, #1a1a2e);
+  padding: 5rem 0;
+  color: #fff;
+}
+
+.section-title {
+  color: #e83515;
+  position: relative;
+  display: inline-block;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #e83515;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.contact-info {
+  background: rgba(15, 52, 96, 0.7);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(232, 53, 21, 0.3);
+  backdrop-filter: blur(10px);
+  height: 100%;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  color: #39FF14;
+}
+
+.contact-buttons .btn {
+  border-radius: 8px;
+  min-width: 150px;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-outline-light {
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #0f3460;
+}
+
+.map-container {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos responsivos */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .contact-buttons .btn {
+    min-width: 130px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 3rem 0;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .contact-buttons .btn {
+    width: 100%;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}
+</style>

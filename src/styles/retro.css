@@ -1,0 +1,243 @@
+/* Estilos globales para la estética retro 90/2000 */
+
+/* Tipografía retro */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  --retro-primary: #e83515;
+  --retro-accent-green: #39FF14; /* Verde mutante/radioactivo */
+  --retro-dark: #0f3460;
+  --retro-darker: #1a1a2e;
+  --retro-accent: #16213e;
+  --retro-light: #e9ecef;
+  --retro-gray: #6c757d;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Estilos de botones con estética retro */
+.btn-retro {
+  position: relative;
+  border-radius: 8px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.btn-retro::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid currentColor;
+  box-sizing: border-box;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.btn-retro:hover::after {
+  opacity: 1;
+}
+
+/* Efecto de brillo en botones */
+.btn-retro:hover {
+  box-shadow: 0 0 15px rgba(232, 53, 21, 0.5);
+}
+
+/* Estilo retro para títulos de sección */
+.section-title {
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: var(--retro-primary);
+  font-size: 2rem;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--retro-primary), 0 0 20px var(--retro-primary), 0 0 35px var(--retro-primary), 0 0 40px var(--retro-primary);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0.5);
+  width: 80px;
+  height: 4px;
+  background: var(--retro-primary);
+  transform-origin: center;
+  animation: retroLine 2s infinite alternate;
+}
+
+/* Estilo retro para títulos */
+.retro-title {
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: var(--retro-primary);
+  font-size: 2rem;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--retro-primary), 0 0 20px var(--retro-primary), 0 0 35px var(--retro-primary), 0 0 40px var(--retro-primary);
+}
+
+.retro-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0.5);
+  width: 80px;
+  height: 4px;
+  background: var(--retro-primary);
+  transform-origin: center;
+  animation: retroLine 2s infinite alternate;
+}
+
+/* Clase para elementos con efecto neon verde mutante */
+.neon-green {
+  color: var(--retro-accent-green);
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--retro-accent-green), 0 0 20px var(--retro-accent-green), 0 0 35px var(--retro-accent-green), 0 0 40px var(--retro-accent-green);
+}
+
+@keyframes retroLine {
+  from { transform: translateX(-50%) scaleX(0.5); }
+  to { transform: translateX(-50%) scaleX(1); }
+}
+
+/* Efectos de borde retro */
+.retro-border {
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+
+.retro-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  padding: 2px;
+  background: linear-gradient(45deg, var(--retro-primary), #00f3ff, var(--retro-primary), #00f3ff);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Estilo para elementos con efecto neon */
+.neon-text {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--retro-primary), 0 0 20px var(--retro-primary);
+}
+
+.neon-box {
+  box-shadow: 0 0 10px rgba(232, 53, 21, 0.5);
+}
+
+/* Efectos de animación */
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo para los iconos retro */
+.retro-icon {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: var(--retro-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.retro-icon::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px solid var(--retro-primary);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Estilos para la barra de navegación retro */
+.navbar.retro-navbar {
+  background: rgba(15, 52, 96, 0.9) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(232, 53, 21, 0.3);
+}
+
+.navbar.retro-navbar .navbar-brand {
+  color: var(--retro-primary) !important;
+  font-weight: bold;
+}
+
+.navbar.retro-navbar .nav-link {
+  color: var(--retro-light) !important;
+  position: relative;
+  padding: 0.5rem 1rem !important;
+}
+
+.navbar.retro-navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--retro-primary);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar.retro-navbar .nav-link:hover::after {
+  width: 80%;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .retro-title {
+    font-size: 1.5rem;
+  }
+  
+  .btn-retro {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .retro-title {
+    font-size: 1.2rem;
+  }
+}

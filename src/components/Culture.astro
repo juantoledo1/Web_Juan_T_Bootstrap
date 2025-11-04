@@ -1,0 +1,179 @@
+---
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/retro.css';
+---
+
+<section id="cultura" class="culture-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h2 class="section-title retro-title" data-aos="fade-up">Cultura y Entretenimiento</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+          Acá la espera también se disfruta
+        </p>
+      </div>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <!-- Videojuegos retro -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="culture-card text-center retro-border">
+          <div class="culture-icon">
+            <img src="/33.jpg" alt="Videojuegos Retro" class="culture-icon-img rounded-circle" />
+          </div>
+          <h3 class="culture-title">Videojuegos Retro</h3>
+          <p class="culture-description">Arcade con joystick y juegos clásicos de los 90s</p>
+        </div>
+      </div>
+      
+      <!-- Películas -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="culture-card text-center retro-border">
+          <div class="culture-icon">
+            <img src="/peli.jpg" alt="Películas Clásicas" class="culture-icon-img rounded-circle" />
+          </div>
+          <h3 class="culture-title">Películas Clásicas</h3>
+          <p class="culture-description">90s/2000 (terror, acción, comedia y adaptaciones de videojuegos)</p>
+        </div>
+      </div>
+      
+      <!-- Música -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="culture-card text-center retro-border">
+          <div class="culture-icon">
+            <img src="/22.jpg" alt="Música Alternativa" class="culture-icon-img rounded-circle" />
+          </div>
+          <h3 class="culture-title">Música Alternativa</h3>
+          <p class="culture-description">Música que rompe el molde</p>
+        </div>
+      </div>
+      
+      <!-- Libros -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="culture-card text-center retro-border">
+          <div class="culture-icon">
+            <img src="/commingsoon.jpeg" alt="Libros" class="culture-icon-img rounded-circle" />
+          </div>
+          <h3 class="culture-title">Libros</h3>
+          <p class="culture-description">Stephen King y similares</p>
+        </div>
+      </div>
+      
+      <!-- Práctica de inglés -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="culture-card text-center retro-border">
+          <div class="culture-icon">
+            <img src="/01.jpg" alt="Práctica de Inglés" class="culture-icon-img rounded-circle" />
+          </div>
+          <h3 class="culture-title">Práctica de Inglés</h3>
+          <p class="culture-description">Conversacional básico/intermedio</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.culture-section {
+  background: linear-gradient(to bottom, #1a1a2e, #0f3460);
+  padding: 5rem 0;
+  color: #fff;
+}
+
+.section-title {
+  color: #e83515;
+  position: relative;
+  display: inline-block;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #e83515;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 3rem;
+}
+
+.culture-card {
+  background: rgba(15, 52, 96, 0.7);
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  border: 1px solid rgba(232, 53, 21, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.culture-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(232, 53, 21, 0.3);
+  background: rgba(23, 32, 58, 0.8);
+}
+
+.culture-icon-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin: 0 auto 1.5rem auto;
+  border: 2px solid #39FF14;
+  transition: transform 0.3s ease;
+}
+
+.culture-card:hover .culture-icon-img {
+  transform: scale(1.1);
+}
+
+.culture-title {
+  color: #39FF14;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.culture-description {
+  color: #ddd;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Estilos responsivos */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .culture-section {
+    padding: 3rem 0;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .culture-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}
+</style>

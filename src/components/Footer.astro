@@ -3,21 +3,70 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 ---
-<footer class="bg-dark text-center text-white">
-  <div class="container p-4 pb-0">
-    <section class="mb-6">
-      <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="https://www.facebook.com/Juannpeluquero/" target="_blank" rel="noopener noreferrer">
+<footer class="footer bg-dark text-white text-center">
+  <div class="container p-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 text-center">
+        <h5 class="text-uppercase text-warning">Betelgeuse</h5>
+        <p class="footer-slogan">Donde tu estilo sube de nivel.</p>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 text-center">
+        <h5 class="text-uppercase text-warning">Horarios</h5>
+        <ul class="list-unstyled mb-0">
+          <li>Mar-Sáb: 15:30 a 20:00</li>
+          <li>Dom y Lun: Cerrado</li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 text-center">
+        <h5 class="text-uppercase text-warning">Contacto</h5>
+        <ul class="list-unstyled">
+          <li><i class="bi bi-geo-alt me-2"></i> Lopez Torres 4155</li>
+          <li>Posadas, Misiones, Argentina</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    <div class="social-icons mb-3 d-flex justify-content-center">
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/betelgeuse.hub" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
         <i class="bi bi-facebook"></i>
       </a>
-
-      <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac;" href="https://www.instagram.com/juantoledopeluquero/" target="_blank" rel="noopener noreferrer">
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/betelgeuse_hub/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
         <i class="bi bi-instagram"></i>
       </a>
-    </section>
-  </div>
-  <div class="row align-items-center text-center  p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    <p class="col-md-12 ">&copy; 2024 Derechos de autor reservados:</p>
-    <p class="col-md-12">BETELGEUSE</p>
-    <p class="col-md-12 font-monospace " >Lopez Torres 4155, Posadas, Misiones, Argentina</p>
+      <a class="btn btn-outline-light btn-floating m-1" href="https://wa.me/5493764674458" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+      </a>
+    </div>
+    <span>&copy; 2024 Betelgeuse. Todos los derechos reservados.</span>
   </div>
 </footer>
+
+<style>
+.footer {
+  margin-top: auto;
+}
+
+.footer-slogan {
+  font-style: italic;
+  color: #ccc;
+}
+
+.social-icons .btn {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons .btn:hover {
+  background-color: #e83515;
+  border-color: #e83515;
+  transform: scale(1.1);
+}
+</style>

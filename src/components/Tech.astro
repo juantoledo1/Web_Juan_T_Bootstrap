@@ -1,0 +1,275 @@
+---
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/retro.css';
+---
+
+<section id="tech" class="tech-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h2 class="section-title retro-title" data-aos="fade-up">Tech en Venta</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+          Tecnología útil a buen precio, sin vueltas
+        </p>
+      </div>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <!-- Parlantes Bluetooth -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="tech-card text-center retro-border">
+          <div class="tech-icon neon-icon">
+            <i class="bi bi-speaker-fill tech-icon-img"></i>
+          </div>
+          <h3 class="tech-title">Parlantes Bluetooth</h3>
+        </div>
+      </div>
+      
+      <!-- Auriculares -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="tech-card text-center retro-border">
+          <div class="tech-icon neon-icon">
+            <i class="bi bi-headphones tech-icon-img"></i>
+          </div>
+          <h3 class="tech-title">Auriculares</h3>
+          <p class="tech-subtitle">Cable y Bluetooth</p>
+        </div>
+      </div>
+      
+      <!-- Joysticks -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="tech-card text-center retro-border">
+          <div class="tech-icon neon-icon">
+            <i class="bi bi-joystick tech-icon-img"></i>
+          </div>
+          <h3 class="tech-title">Joysticks</h3>
+        </div>
+      </div>
+      
+      <!-- Mouse gamer -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="tech-card text-center retro-border">
+          <div class="tech-icon neon-icon">
+            <i class="bi bi-mouse tech-icon-img"></i>
+          </div>
+          <h3 class="tech-title">Mouse Gamer</h3>
+        </div>
+      </div>
+      
+      <!-- Teclados gamer -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="tech-card text-center retro-border">
+          <div class="tech-icon neon-icon">
+            <i class="bi bi-keyboard tech-icon-img"></i>
+          </div>
+          <h3 class="tech-title">Teclados Gamer</h3>
+        </div>
+      </div>
+      
+      <!-- Smartwatches -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="700">
+        <div class="tech-card text-center retro-border">
+          <div class="tech-icon neon-icon">
+            <i class="bi bi-apple tech-icon-img"></i>
+          </div>
+          <h3 class="tech-title">Smartwatches</h3>
+        </div>
+      </div>
+      
+      <!-- Pendrives y MicroSD -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="800">
+        <div class="tech-card text-center retro-border">
+          <div class="tech-icon neon-icon">
+            <i class="bi bi-usb-drive tech-icon-img"></i>
+          </div>
+          <h3 class="tech-title">Pendrives y MicroSD</h3>
+        </div>
+      </div>
+      
+      <!-- Combos gamer -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="900">
+        <div class="tech-card text-center retro-border">
+          <div class="tech-icon neon-icon">
+            <i class="bi bi-controller tech-icon-img"></i>
+          </div>
+          <h3 class="tech-title">Combos Gamer</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5 justify-content-center">
+      <div class="col-lg-8 text-center">
+        <p class="tech-catalog-text">
+          ¿Querés ver todos nuestros productos disponibles? Entrá al catálogo completo:
+        </p>
+        <a href="https://wa.me/c/5493764674458" target="_blank" class="btn btn-success btn-lg btn-retro mt-3">
+          <i class="bi bi-whatsapp"></i> Ver catálogo en WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.tech-section {
+  background-color: #16213e;
+  padding: 5rem 0;
+  color: #fff;
+}
+
+.section-title {
+  color: #e83515;
+  position: relative;
+  display: inline-block;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #e83515;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.tech-card {
+  background: #0f3460;
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  border: 1px solid rgba(232, 53, 21, 0.3);
+}
+
+.tech-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(232, 53, 21, 0.3);
+  background: #1a1a2e;
+}
+
+.tech-icon-img {
+  width: 80px;
+  height: 80px;
+  font-size: 3rem;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  color: #39FF14; /* Verde neon */
+  text-shadow: 
+    0 0 5px #fff, 
+    0 0 10px #fff, 
+    0 0 15px #39FF14, 
+    0 0 20px #39FF14, 
+    0 0 35px #39FF14, 
+    0 0 40px #39FF14;
+  transition: transform 0.3s ease;
+}
+
+.neon-icon {
+  position: relative;
+}
+
+.neon-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid rgba(57, 255, 20, 0.3);
+  animation: pulse 2s infinite;
+  pointer-events: none;
+}
+
+.tech-card:hover .tech-icon-img {
+  transform: scale(1.1);
+  text-shadow: 
+    0 0 10px #fff, 
+    0 0 20px #fff, 
+    0 0 30px #39FF14, 
+    0 0 40px #39FF14, 
+    0 0 55px #39FF14, 
+    0 0 60px #39FF14;
+}
+
+.tech-card:hover .neon-icon::after {
+  animation: pulse 1.5s infinite;
+  border: 2px solid rgba(57, 255, 20, 0.6);
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.tech-title {
+  color: #39FF14;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.tech-subtitle {
+  color: #ddd;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.tech-catalog-text {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-section {
+    padding: 3rem 0;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .tech-catalog-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}
+</style>

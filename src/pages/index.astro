@@ -1,39 +1,44 @@
 ---
+// Importar componentes
 import Navbar from '../components/Navbar.astro';
-import Banner from '../components/Banner.astro';
-import Home from './Home.astro';
-import Servicios from './Servicios.astro';
-import Contacto from './Contacto.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Services from '../components/Services.astro';
+import Culture from '../components/Culture.astro';
+import Tech from '../components/Tech.astro';
+import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
-
-
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/logon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>BETELGEUSE</title>
-		<meta name="description" content="BELTEGEUSE Peluquería unisex en Posadas, Misiones, Argentina. Ofrecemos cortes de pelo unisex, peinados, tratamientos de aLisado , Kerarina y videojuegos retros para entretener a nuestros clientes mientras son atendidos.">
-        <meta name="keywords" content="peluquería, unisex, posadas, misiones, argentina, cortes de pelo unisex, peinados, tratamientos de aLisado , Kerarina , videojuegos retros">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="robots" content="index, follow">
-        <meta name="author" content="BETELGEUSE">
-        <meta name="og:title" content="BETELGEUSE">
-        <meta name="og:description" content="BETELGEUSE Peluquería unisex en Posadas, Misiones, Argentina. Ofrecemos cortes de pelo unisex, peinados, tratamientos Alisados y videojuegos retros para entretener a nuestros clientes mientras son atendidos.">
-        <meta name="og:image" content="https://betelgeusee.netlify.app/logoNuevo.png">
-        <meta name="og:url" content="https://betelgeusee.netlify.app/">
-	</head>
-	<>
-		<Navbar/>
-		<Banner/>
-		<Home />
-		<Servicios/>
-		<Contacto/>
-		<Footer/>
-		
-
-	</body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/logon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content={Astro.generator} />
+  <title>Betelgeuse | Cortes con onda retro, videojuegos y buena vibra</title>
+  <meta name="description" content="Experiencia retro con cortes de estilo, juegos arcade, música 90/2000, películas clásicas, lectura, práctica de inglés y accesorios tech. Posadas, Misiones. Turnos online." />
+  <meta name="keywords" content="corte de pelo posadas, corte moderno posadas, experiencia gamer posadas, videojuegos retro posadas, accesorios tech posadas, brushing posadas, color de cabello posadas, corte mujer posadas, corte hombre posadas, práctica de inglés posadas, retro experience argentina" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Betelgeuse" />
+  <meta name="og:title" content="Betelgeuse | Cortes con onda retro, videojuegos y buena vibra" />
+  <meta name="og:description" content="Experiencia retro con cortes de estilo, juegos arcade, música 90/2000, películas clásicas, lectura, práctica de inglés y accesorios tech. Posadas, Misiones. Turnos online." />
+  <meta name="og:image" content="https://betelgeusee.netlify.app/logoNuevo.png" />
+  <meta name="og:url" content="https://betelgeusee.netlify.app/" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <Navbar />
+  <main class="flex-grow-1">
+    <Hero />
+    <About />
+    <Services />
+    <Culture />
+    <Tech />
+    <Contact />
+  </main>
+  <Footer />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 </html>
