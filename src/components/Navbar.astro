@@ -38,14 +38,30 @@ import '../styles/retro.css';
   <script>
     // Esperar a que Bootstrap esté cargado
     document.addEventListener('DOMContentLoaded', function() {
+      const navbarCollapse = document.querySelector('#navbarSupportedContent');
+      const navLinks = document.querySelectorAll('.nav-link');
+      
+      // Cerrar el menú al hacer clic en un enlace de navegación
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          // Usar el método de Bootstrap para ocultar el menú
+          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+          if (bsCollapse) {
+            bsCollapse.hide();
+          } else {
+            // Si no está inicializado, simplemente remover la clase show
+            navbarCollapse.classList.remove('show');
+          }
+        });
+      });
+      
       // Cerrar el menú cuando se hace clic fuera del navbar
       document.addEventListener('click', (event) => {
         const navbar = document.querySelector('.navbar');
         const navbarToggler = document.querySelector('.navbar-toggler');
-        const navbarCollapse = document.querySelector('#navbarSupportedContent');
         
         // Verificar si el clic fue fuera del navbar y el menú está abierto
-        if (!navbar.contains(event.target) && navbarCollapse.classList.contains('show')) {
+        if (!navbar.contains(event.target) && !navbarToggler.contains(event.target) && navbarCollapse.classList.contains('show')) {
           // Usar el método de Bootstrap para ocultar el menú
           const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
           if (bsCollapse) {
