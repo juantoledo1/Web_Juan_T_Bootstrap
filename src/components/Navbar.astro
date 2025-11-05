@@ -76,32 +76,35 @@ import '../styles/retro.css';
     </script>
   
   <style>
-    /* Asegurar que el navbar no sobresalga */
+    /* Solución definitiva para que el navbar no sobresalga */
     .navbar {
-      overflow: visible;
+      overflow: hidden;
+      max-width: 100vw;
     }
     
     .container {
       max-width: 100% !important;
       padding-left: 15px;
       padding-right: 15px;
+      width: 100%;
     }
     
-    /* Ajustes para navbar en dispositivos móviles */
+    /* Ajuste específico para dispositivos móviles */
     @media (max-width: 991.98px) {
       .navbar {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
       }
       
       .container {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
       }
       
       .navbar-brand {
-        flex: 1;
-        min-width: 0; /* Permite que se reduzca si es necesario */
+        margin-right: auto; /* Empuja el botón hamburguesa hacia la derecha */
       }
       
       .navbar-collapse {
