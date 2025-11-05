@@ -122,6 +122,8 @@ import '../styles/retro.css';
   font-size: 2.5rem;
   margin-bottom: 1rem;
   text-align: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .section-title::after {
@@ -140,6 +142,8 @@ import '../styles/retro.css';
   color: #ccc;
   margin-bottom: 3rem;
   text-align: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .tech-card {
@@ -228,18 +232,24 @@ import '../styles/retro.css';
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
   text-align: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .tech-subtitle {
   color: #ddd;
   font-size: 1rem;
   text-align: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .tech-catalog-text {
   font-size: 1.2rem;
   color: #ccc;
   margin-bottom: 1rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Estilos responsivos */
@@ -266,10 +276,20 @@ import '../styles/retro.css';
 @media (max-width: 576px) {
   .section-title {
     font-size: 1.5rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
   
   .section-subtitle {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .section-title {
+    font-size: 1.2rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 }
 </style>

@@ -21,8 +21,8 @@ import '../styles/retro.css';
           <p class="text-light"><i class="bi bi-geo-alt-fill me-2"></i> Betelgeuse - Lopez Torres 4155, Posadas, Misiones, Argentina</p>
           
           <h4 class="text-white mt-4 mb-4">Horarios</h4>
-          <p class="text-light">Lunes a Sábado: 15:30 a 20:00</p>
-          <p class="text-light">Domingo: Cerrado</p>
+          <p class="text-light">Martes a Sábado: 15:30 a 20:00</p>
+          <p class="text-light">Domingo y Lunes: Cerrado</p>
           
           <div class="contact-buttons mt-4 d-flex flex-wrap justify-content-center">
             <a href="https://wa.me/5493764674458" class="btn btn-success btn-lg me-3 mb-3 btn-retro" target="_blank">
@@ -70,6 +70,8 @@ import '../styles/retro.css';
   font-size: 2.5rem;
   margin-bottom: 1rem;
   text-align: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .section-title::after {
@@ -88,6 +90,8 @@ import '../styles/retro.css';
   color: #ccc;
   margin-bottom: 3rem;
   text-align: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .contact-info {
@@ -103,6 +107,8 @@ import '../styles/retro.css';
   font-size: 1.1rem;
   margin-bottom: 1rem;
   text-align: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .contact-info i {
@@ -187,10 +193,20 @@ import '../styles/retro.css';
 @media (max-width: 576px) {
   .section-title {
     font-size: 1.5rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
   
   .section-subtitle {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .section-title {
+    font-size: 1.2rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 }
 </style>
