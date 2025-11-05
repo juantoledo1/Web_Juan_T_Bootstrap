@@ -4,9 +4,9 @@ import '../styles/retro.css';
 
 ---
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark border border-1 fixed-top navbar-scrolled retro-navbar">
-    <div class="container-fluid px-3">
-      <a class="navbar-brand text-truncate" href="#">
-        <img src="/logoNuevo.png" alt="Logo" width="30" height="30" class="d-inline-block align-top me-2">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="/logoNuevo.png" alt="Logo" width="40" height="40" class="d-inline-block align-top">
         BETELGEUSE
       </a>
       <button class="navbar-toggler border border-2 border-danger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,15 +76,32 @@ import '../styles/retro.css';
     </script>
   
   <style>
+    /* Asegurar que el navbar no sobresalga */
+    .navbar {
+      overflow: visible;
+    }
+    
+    .container {
+      max-width: 100% !important;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    
     /* Ajustes para navbar en dispositivos móviles */
     @media (max-width: 991.98px) {
       .navbar {
-        padding: 0.5rem 0.75rem;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
       }
       
       .navbar-brand {
-        font-size: 0.9rem;
-        max-width: calc(100% - 80px); /* Deja espacio para el botón de hamburguesa */
+        flex: 1;
+        min-width: 0; /* Permite que se reduzca si es necesario */
       }
       
       .navbar-collapse {
@@ -92,27 +109,7 @@ import '../styles/retro.css';
         backdrop-filter: blur(10px);
         border-radius: 0.5rem;
         margin-top: 0.5rem;
-      }
-      
-      .navbar-nav {
-        gap: 0.5rem;
-      }
-      
-      .nav-link {
-        padding: 0.75rem 1rem !important;
-      }
-    }
-    
-    /* En pantallas muy pequeñas */
-    @media (max-width: 575.98px) {
-      .navbar-brand {
-        font-size: 0.8rem;
-        max-width: calc(100% - 70px);
-      }
-      
-      .navbar-brand img {
-        width: 25px;
-        height: 25px;
+        padding: 0.5rem;
       }
     }
   </style>
