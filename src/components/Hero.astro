@@ -88,6 +88,7 @@ import '../styles/retro.css';
   height: 100%;
   pointer-events: none;
   z-index: 0; /* Ajustado para que no interfiera con el contenido */
+  overflow: hidden; /* Evita desbordamiento */
 }
 
 .corner-tl, .corner-tr, .corner-bl, .corner-br {
@@ -106,7 +107,7 @@ import '../styles/retro.css';
 
 .corner-tr {
   top: 20px;
-  right: 20px;
+  right: 0; /* Cambiado de 20px a 0 para evitar desbordamiento */
   border-left: none;
   border-bottom: none;
 }
@@ -120,9 +121,20 @@ import '../styles/retro.css';
 
 .corner-br {
   bottom: 20px;
-  right: 20px;
+  right: 0; /* Cambiado de 20px a 0 para evitar desbordamiento */
   border-left: none;
   border-top: none;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 576px) {
+  .corner-tr, .corner-br {
+    right: 0 !important;
+  }
+  
+  .corner-tl, .corner-bl {
+    left: 0 !important;
+  }
 }
 
 .hero-title {
