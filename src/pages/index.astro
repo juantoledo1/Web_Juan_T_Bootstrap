@@ -8,42 +8,78 @@ import Culture from '../components/Culture.astro';
 import Tech from '../components/Tech.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
+// CSS/JS de Bootstrap e iconos desde node_modules (sin CDN)
+import 'bootstrap-icons/font/bootstrap-icons.css';
 ---
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" type="image/svg+xml" href="/logon.ico" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://betelgeusee.netlify.app/" />
   <style>
     body {
       overflow-x: hidden;
     }
   </style>
   <meta name="generator" content={Astro.generator} />
-  <title>Betelgeuse | Peluquería temática con experiencia retro games y tech | Retro Games & Tech Hair Salon</title>
-  <meta name="description" content="Pelúquería con experiencia retro games: cortes de cabello (haircut) mientras juegas a videojuegos arcade, escuchas música 90s/2000, ves películas clásicas, disfrutas tecnología y accesorios tech. Posadas, Misiones. Turnos online. We speak English." />
-  <meta name="keywords" content="peluquería experiencia retro games Posadas, corte de pelo con videojuegos, peluquería temática tech, venta accesorios tech Posadas, salón de peluquería gamer, cortes con experiencia retro, experiencia retro games, corte mujer Posadas, corte hombre Posadas, gaming haircut salon, retro games experience salon, haircut with gaming experience, peluquería tech Posadas, video game themed salon, Posadas hair salon, retro gaming experience, tech accessories salon, retro games and tech hair salon, experiencia gamer en peluquería, we speak english" />
+  <title>Betelgeuse | Peluquería Retro Games &amp; Arcade en Posadas</title>
+  <meta name="description" content="Peluquería con retro games y arcades en Posadas: cortes mientras jugás a videojuegos retro. Retro gaming hair salon y accesorios tech. Turnos online. We speak English." />
+  <meta name="keywords" content="peluquería Posadas, retro games, arcades, retro gaming hair salon, corte de cabello con videojuegos, peluquería temática, gaming haircut, Posadas hair salon, retro games experience, arcade haircut, peluquería gamer, accesorios tech, retro games and tech hair salon" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Betelgeuse" />
-  <meta name="og:title" content="Betelgeuse | Peluquería con experiencia retro games y tech | Retro Games & Tech Hair Salon" />
-  <meta name="og:description" content="Pelúquería con experiencia retro games: cortes de cabello mientras juegas a videojuegos arcade, escuchas música 90s/2000, ves películas clásicas, disfrutas tecnología y accesorios tech. Posadas, Misiones. We speak English." />
-  <meta name="og:image" content="https://betelgeusee.netlify.app/logoNuevo.png" />
-  <meta name="og:url" content="https://betelgeusee.netlify.app/" />
-  <meta name="og:type" content="website">
-  <meta name="og:locale" content="es_ES">
-  <meta name="og:site_name" content="Betelgeuse">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Betelgeuse | Peluquería con experiencia retro games y tech">
-  <meta name="twitter:description" content="Peluquería con experiencia retro games: cortes de cabello mientras juegas a videojuegos arcade, escuchas música 90s/2000, ves películas clásicas, disfrutas tecnología y accesorios tech. Posadas, Misiones. We speak English.">
-  <meta name="twitter:image" content="https://betelgeusee.netlify.app/logoNuevo.png">
-  <meta name="twitter:site" content="@betelgeuse">
-  <!-- Metaetiquetas para otras redes sociales -->
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Logo de Betelgeuse - Peluquería temática con juegos retro">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <meta property="og:title" content="Betelgeuse | Peluquería Retro Games &amp; Arcade en Posadas" />
+  <meta property="og:description" content="Peluquería con retro games y arcades en Posadas: cortes mientras jugás a videojuegos retro. Retro gaming hair salon y accesorios tech. Turnos online. We speak English." />
+  <meta property="og:image" content="https://betelgeusee.netlify.app/logoNuevo.png" />
+  <meta property="og:url" content="https://betelgeusee.netlify.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:site_name" content="Betelgeuse" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Logo de Betelgeuse - Peluquería temática retro games & arcade" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Betelgeuse | Peluquería Retro Games &amp; Arcade en Posadas" />
+  <meta name="twitter:description" content="Peluquería con retro games y arcades en Posadas: cortes mientras jugás a videojuegos retro. Retro gaming hair salon. Turnos online. We speak English." />
+  <meta name="twitter:image" content="https://betelgeusee.netlify.app/logoNuevo.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Betelgeuse",
+    "description": "Peluquería en Posadas, Misiones con experiencia retro games y arcades. Cortes de cabello mientras jugás a videojuegos retro, música 90s/2000, películas clásicas, tecnología y accesorios tech. Retro gaming hair salon. We speak English.",
+    "url": "https://betelgeusee.netlify.app/",
+    "image": "https://betelgeusee.netlify.app/logoNuevo.png",
+    "logo": "https://betelgeusee.netlify.app/logoNuevo.png",
+    "telephone": "+5493764674458",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. López Torres 4155",
+      "postalCode": "3300",
+      "addressLocality": "Posadas",
+      "addressRegion": "Misiones",
+      "addressCountry": "AR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -27.3880312,
+      "longitude": -55.8926579
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "15:30",
+        "closes": "20:00"
+      }
+    ],
+    "keywords": "peluquería Posadas, retro games, arcade, retro gaming hair salon, corte de cabello, gaming salon, peluquería temática retro",
+    "acceptsReservations": true
+  }
+  </script>
 </head>
 <body class="d-flex flex-column min-vh-100">
   <Navbar />
@@ -56,6 +92,8 @@ import Footer from '../components/Footer.astro';
     <Contact />
   </main>
   <Footer />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+    import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+  </script>
 </body>
 </html>
